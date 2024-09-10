@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "838589239919",
+    "project_id": "dodododog-ce528",
+    "storage_bucket": "dodododog-ce528.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838589239919:android:2db561bb99bbb0e1c6739a",
+        "android_client_info": {
+          "package_name": "com.ham.dodododog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCufWHvo5NHCl2CRC_pu3UVrYPUvm7NivE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

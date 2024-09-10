@@ -5,6 +5,7 @@ import dev.icerock.gradle.MRVisibility
 
 plugins {
     kotlin("multiplatform")
+    kotlin("native.cocoapods")
     id("com.android.library")
 
     id("org.jetbrains.compose")
@@ -29,6 +30,26 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+
+    cocoapods {
+        ios.deploymentTarget = "16.0"
+
+        summary = "Some description for the Shared Module"
+        homepage = "Link to the Shared Module homepage"
+        version = "1.0"
+        podfile = project.file("../iosApp/Podfile")
+        framework {
+            baseName = "shared"
+            export("dev.icerock.moko:resources:$mokoResource")
+            export("dev.icerock.moko:graphics:0.9.0")
+            export("dev.gitlive:firebase-storage:1.10.0")
+        }
+        noPodspec()
+        pod("FirebaseStorage") {
+            version = "10.7.0"
+            linkOnly = true
+        }
+    }
 
     sourceSets {
         val ktorVersion = "2.3.2-eap-692"
