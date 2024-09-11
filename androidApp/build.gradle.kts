@@ -47,4 +47,9 @@ dependencies {
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
     debugImplementation(libs.compose.ui.tooling)
+    implementation(libs.compose.foundation)
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("androidx.activity:activity-compose:1.7.1")
+    implementation("androidx.appcompat:appcompat-resources:1.6.1")
 }
