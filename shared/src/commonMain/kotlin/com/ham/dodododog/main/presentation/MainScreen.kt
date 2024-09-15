@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.ham.dodododog.backKeyListener
 import com.ham.dodododog.di.AppModule
+import com.ham.dodododog.home.presentation.HomeScreen
 import com.ham.dodododog.isAndroid
 import dev.icerock.moko.mvvm.compose.getViewModel
 import dev.icerock.moko.mvvm.compose.viewModelFactory
@@ -59,7 +60,12 @@ fun MainScreen(appModule: AppModule) {
                 top = if (isAndroid()) 0.dp else 30.dp
             )
         ) {
-
+            when (state.selectedTab) {
+                MainState.NAVIGATION_TAB_HOME -> HomeScreen(viewModel, appModule)
+                MainState.NAVIGATION_TAB_BOOK -> HomeScreen(viewModel, appModule)
+                MainState.NAVIGATION_TAB_REWARD -> HomeScreen(viewModel, appModule)
+                MainState.NAVIGATION_TAB_GAME -> HomeScreen(viewModel, appModule)
+            }
         }
     }
 }

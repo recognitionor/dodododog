@@ -12,7 +12,9 @@ data class MainState(
     val error: String = "",
 ) {
     companion object {
-
-
+        const val NAVIGATION_TAB_HOME = 0
+        const val NAVIGATION_TAB_GAME = 1
+        const val NAVIGATION_TAB_BOOK = 2
+        const val NAVIGATION_TAB_REWARD = 3
     }
 }

@@ -1,8 +1,6 @@
 @file:Suppress("OPT_IN_IS_NOT_ENABLED")
 
 import dev.icerock.gradle.MRVisibility
-
-
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
@@ -81,9 +79,9 @@ kotlin {
 
                 implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1") // 버전은 적절히 선택
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0") // 버전은 적절히 선택
                 api("dev.gitlive:firebase-storage:1.10.0")
-                api("org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.2")
+                api("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.0")
 
                 implementation("com.opencsv:opencsv:5.5.2")
                 implementation("com.google.code.gson:gson:2.9.0")
